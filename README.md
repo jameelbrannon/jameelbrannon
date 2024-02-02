@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @jameelbrannon
-- 👀 I’m interested in investments (primarily public stocks), python, sql, & other
+- 👀 Interested in stocks/bonds, python, & sql
 - 📫 How to reach me | jameelbrannon@outlook.com
 
 <!---
