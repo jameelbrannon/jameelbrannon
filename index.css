@@ -121,3 +121,21 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
         font-size: 1em; /* Adjust paragraph size for smaller screens */
     }
 }
+
+.container a {
+    color: #1cb41c; /* Green to match your button theme */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.container a:hover {
+    background-color: #1cb41c;
+    color: #fff;
+    transform: scale(1.05);
+}
