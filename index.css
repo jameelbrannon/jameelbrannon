@@ -42,26 +42,26 @@ header nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px; /* Increase padding */
+    padding: 40px 20px;
     box-sizing: border-box;
 }
 
 .container > * {
-    width: 100%; /* Ensure content spans full width */
-    max-width: 800px; /* Limit maximum width for readability */
-    text-align: left; /* Left-align text */
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
 }
 
 /* Heading and paragraph styles */
 h1, p {
-    font-size: 2.5em; /* Slightly larger font size for h1 */
-    color: #ffffff; /* White color */
-    margin-bottom: 20px; /* Add some space below elements */
-    line-height: 1.6; /* Improve readability */
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 p {
-    font-size: 1.2em; /* Standard size for paragraphs */
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -73,13 +73,13 @@ button, input[type="submit"] {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #148c14; /* Darker green on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #148c14;
+    transform: scale(1.05);
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -89,41 +89,17 @@ input[type="text"], input[type="email"], textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease; /* Smooth transition */
+    transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-color: #1cb41c; /* Green border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #1cb41c;
+    outline: none;
 }
 
-/* Responsive adjustments */
-@media only screen and (max-width: 600px) {
-    .container, header nav {
-        padding: 20px; /* Adjust padding for smaller screens */
-        text-align: left; /* Left-align text for mobile */
-    }
-
-    header nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav a {
-        margin: 5px 0;
-    }
-
-    h1 {
-        font-size: 2em; /* Adjust heading size for smaller screens */
-    }
-
-    p {
-        font-size: 1em; /* Adjust paragraph size for smaller screens */
-    }
-}
-
+/* Research Page Links */
 .container a {
-    color: #1cb41c; /* Green to match your button theme */
+    color: #1cb41c;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -138,4 +114,82 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     background-color: #1cb41c;
     color: #fff;
     transform: scale(1.05);
+}
+
+/* Home Page Specific Styles */
+.container-home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about-me {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    color: #1cb41c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: 1px solid #1cb41c;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #1cb41c;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    .container, .container-home, header nav {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p, .about-me {
+        font-size: 1em;
+    }
 }
