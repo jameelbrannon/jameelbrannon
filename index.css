@@ -97,25 +97,6 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     outline: none;
 }
 
-/* Research Page Links */
-.container p a {
-    color: #1cb41c;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #444;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.container p a:hover {
-    background-color: #1cb41c;
-    color: #fff;
-    transform: scale(1.05);
-}
-
 /* Home Page Specific Styles */
 .container-home {
     height: 100vh;
@@ -166,13 +147,34 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     transform: scale(1.05);
 }
 
+/* Research Page Specific Styles */
+.about-research {
+    font-size: 1.2em;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.research-links a {
+    color: #1cb41c;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.research-links a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
 /* Footer */
 .footer {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
+    position: relative;
+    margin-top: 50px;
     font-size: 0.8em;
     color: gray;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Responsive adjustments */
@@ -195,7 +197,13 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
         font-size: 2em;
     }
 
-    p, .about-me {
+    p, .about-me, .about-research {
         font-size: 1em;
     }
+
+    .links a {
+        width: 180px;
+        padding: 10px 20px;
+    }
 }
+
