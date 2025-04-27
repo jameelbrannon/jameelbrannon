@@ -3,9 +3,9 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Tahoma', sans-serif;
-    background-color: #2c2c2c; /* Dark grey background */
-    color: #fff; /* White text color */
-    scroll-behavior: smooth; /* Smooth scroll */
+    background-color: #2c2c2c;
+    color: #fff;
+    scroll-behavior: smooth;
 }
 
 /* Navigation styles */
@@ -27,13 +27,13 @@ header nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav a:hover {
     text-decoration: underline;
-    color: #1cb41c; /* Change color on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #1cb41c;
+    transform: scale(1.1);
 }
 
 /* Container styles */
@@ -98,7 +98,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 }
 
 /* Research Page Links */
-.container a {
+.container p a {
     color: #1cb41c;
     text-decoration: none;
     font-weight: bold;
@@ -110,7 +110,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     margin-top: 20px;
 }
 
-.container a:hover {
+.container p a:hover {
     background-color: #1cb41c;
     color: #fff;
     transform: scale(1.05);
@@ -141,9 +141,9 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 
 .links {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 15px; /* Small gap between links */
+    gap: 15px;
     margin-top: 30px;
 }
 
@@ -156,7 +156,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     padding: 12px 30px;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    width: 220px; /* Consistent button width */
+    width: 220px;
     text-align: center;
 }
 
@@ -164,4 +164,38 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     background-color: #1cb41c;
     color: #fff;
     transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8em;
+    color: gray;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    .container, .container-home, header nav {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p, .about-me {
+        font-size: 1em;
+    }
 }
