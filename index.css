@@ -121,7 +121,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   letter-spacing: 0.02em;
 }
 
-/* Interests (pills) */
+/* Interests (pills) — these are the ONLY boxed items */
 .pill-list {
   list-style: none;
   padding: 0;
@@ -136,6 +136,14 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   border-radius: 999px;
   font-size: 0.95rem;
   color: #e7e7e7;
+  background: transparent;    /* ensure no fill */
+}
+
+/* --- LINK RESET (prevents old “boxy” styles from leaking) --- */
+.links, .links * {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
 }
 
 /* LINKS — works for <div class="links"><a>…</a></div> OR <ul class="links"><li><a>…</a></li></ul> */
@@ -152,6 +160,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   font-weight: 600;
   margin: 8px 0;               /* space between items */
   transition: color 0.2s ease;
+  padding: 0;                  /* no padding = no “button” feel */
+  border-radius: 0;            /* ensure no rounded boxes */
 }
 .links a::before {
   content: "- ";
