@@ -1,209 +1,206 @@
 /* General styles */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Tahoma', sans-serif;
-    background-color: #2c2c2c;
-    color: #fff;
-    scroll-behavior: smooth;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  background-color: #2c2c2c;
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* Navigation styles */
+/* Navigation */
 header {
-    background-color: #2c2c2c;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #2c2c2c;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
 header nav {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-
 header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
 header nav a:hover {
-    text-decoration: underline;
-    color: #1cb41c;
-    transform: scale(1.1);
+  text-decoration: underline;
+  color: #1cb41c;
+  transform: scale(1.06);
 }
 
-/* Container styles */
+/* Containers */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
-
 .container > * {
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
 }
 
-/* Heading and paragraph styles */
-h1, p {
-    font-size: 2.5em;
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-p {
-    font-size: 1.2em;
-    text-align: center;
-}
-
-/* Button and form input styles */
-button, input[type="submit"] {
-    background-color: #1cb41c;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover, input[type="submit"]:hover {
-    background-color: #148c14;
-    transform: scale(1.05);
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-color: #1cb41c;
-    outline: none;
-}
-
-/* Home Page Specific Styles */
+/* Home */
 .container-home {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
-
 .container-home h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
 }
 
+/* Type */
+h1 {
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* About text */
 .about-me {
-    font-size: 1.2em;
-    color: #ccc;
-    max-width: 600px;
-    margin-bottom: 50px;
+  color: #ccc;
+  max-width: 600px;
+  margin-bottom: 32px;
 }
 
-/* Updated Links Section - Simple Text List */
+/* Buttons / Inputs */
+button, input[type="submit"] {
+  background-color: #1cb41c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover, input[type="submit"]:hover {
+  background-color: #148c14;
+  transform: scale(1.03);
+}
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 16px;
+  border: 1px solid #777; /* better contrast on dark bg */
+  background: #1f1f1f;
+  color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #1cb41c;
+  outline: none;
+}
+
+/* Sections */
+.section { margin: 2rem 0; }
+.section h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Interests (pills) */
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.pill-list li {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #3a3a3a;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #e7e7e7;
+}
+
+/* LINKS — works for <div class="links"><a>…</a></div> OR <ul class="links"><li><a>…</a></li></ul> */
 .links {
-    list-style: none;       /* remove default bullets */
-    padding: 0;
-    margin-top: 40px;
-    text-align: left;       /* align text to the left */
+  margin-top: 24px;
+  text-align: left;
+  padding: 0;
 }
-
-.links li {
-    margin: 8px 0;          /* spacing between each item */
-}
-
 .links a {
-    color: #1cb41c;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  display: block;              /* stack vertically */
+  color: #1cb41c;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 8px 0;               /* space between items */
+  transition: color 0.2s ease;
 }
-
 .links a::before {
-    content: "- ";          /* adds the dash before each link */
+  content: "- ";
 }
-
 .links a:hover {
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
+}
+/* If .links is a UL, remove bullets and space items */
+.links li {
+  list-style: none;
+  margin: 8px 0;
 }
 
-/* Research Page Specific Styles */
+/* Research page */
 .about-research {
-    font-size: 1.2em;
-    color: #ccc;
-    text-align: center;
-    margin-bottom: 30px;
+  font-size: 1.05rem;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 24px;
 }
-
 .research-links a {
-    color: #1cb41c;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 1.1em;
+  color: #1cb41c;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
 }
-
 .research-links a:hover {
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
 }
 
 /* Footer */
 .footer {
-    position: relative;
-    margin-top: 50px;
-    font-size: 0.8em;
-    color: gray;
-    text-align: center;
-    padding: 20px;
+  position: relative;
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: gray;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Responsive adjustments */
-@media only screen and (max-width: 600px) {
-    .container, .container-home, header nav {
-        padding: 20px;
-        text-align: center;
-    }
-
-    header nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav a {
-        margin: 5px 0;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    p, .about-me, .about-research {
-        font-size: 1em;
-    }
-
-    .links a {
-        font-size: 1em;
-    }
+/* Responsive */
+@media (max-width: 600px) {
+  header nav {
+    gap: 10px;
+    padding: 12px 20px;
+  }
+  .container-home h1 { font-size: 1.8rem; }
+  p, .about-me, .about-research { font-size: 1rem; }
+  .links a { font-size: 1rem; }
 }
